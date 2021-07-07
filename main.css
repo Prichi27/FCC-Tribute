@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+    --clr-primary-400: #fcc702;
+    --clr-accent-400: hsl(319, 80%, 50%);
+    --clr-background: hsl(0, 0%, 16%);
+
+    --ff-accent: "Ubuntu", sans-serif;
+    --ff-primary: "Ubuntu", sans-serif;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+article {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--clr-background);
+    color: #fff;
+    font-family: var(--ff-primary);
+    line-height: 1.5;
+    letter-spacing: 0.2em;
+    overflow: hidden;
+}
+
+/* -----------------------
+    scroll bar edit 
+-----------------------*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+
+}
+
+h1,
+h2,
+#lifespan {
+    font-family: var(--ff-accent);
+    color: var(--clr-primary-400);
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    background-color: #020202;
+    height: 100vh;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+#img-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#image {
+    max-width: 100%;
+    max-height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+#header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-accent-400);
+    margin: 1rem;
+    border: 1px solid var(--clr-accent-400);
+    padding: 0.8em;
+    text-transform: uppercase;
+    font-size: 0.5em;
+    border-radius: 0.2rem;
+    text-align: center;
+    transition: all 0.5s ease-in;
+}
+
+a:hover {
+    transform: translate(scale(2));
+}
+
+article > section:nth-child(even) {
+    background-color: black;
+}
+
+section {
+    padding-inline: 5em;
+    text-align: justify;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+}
+
+section > p {
+    margin-top: 2rem;
+}
